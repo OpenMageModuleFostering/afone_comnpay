@@ -30,9 +30,9 @@
  */
 class Afone_Comnpay_Model_Config extends Mage_Payment_Model_Config
 {
-    const CONFIG_PATH = 'payment/comnpay/';
+    const CONFIG_PATH = 'payment/comnpay_debit/';
     const VERSION = "1.0.0";
-    
+
 
     /**
      * Return comnpay extension name
@@ -61,7 +61,7 @@ class Afone_Comnpay_Model_Config extends Mage_Payment_Model_Config
 
     /**
      * Return config value for TPE Number
-     * 
+     *
      */
     public function getTpeNo()
     {
@@ -70,7 +70,7 @@ class Afone_Comnpay_Model_Config extends Mage_Payment_Model_Config
 
     /**
      * Return config value for Devise
-     * 
+     *
      */
     public function getDevise()
     {
@@ -79,7 +79,7 @@ class Afone_Comnpay_Model_Config extends Mage_Payment_Model_Config
 
     /**
      * Return config value for Langue
-     * 
+     *
      */
     public function getLangue()
     {
@@ -89,7 +89,7 @@ class Afone_Comnpay_Model_Config extends Mage_Payment_Model_Config
 
     /**
      * Return config value for Secret Key
-     * 
+     *
      */
     public function getSecretKey()
     {
@@ -97,8 +97,8 @@ class Afone_Comnpay_Model_Config extends Mage_Payment_Model_Config
     }
 
     /**
-     * Return Production Gateway URL 
-     * 
+     * Return Production Gateway URL
+     *
      */
     public function getProductionGatewayURL()
     {
@@ -106,8 +106,8 @@ class Afone_Comnpay_Model_Config extends Mage_Payment_Model_Config
     }
 
     /**
-     * Return Homologation Gateway URL 
-     * 
+     * Return Homologation Gateway URL
+     *
      */
     public function getHomologationGatewayURL()
     {
@@ -116,7 +116,7 @@ class Afone_Comnpay_Model_Config extends Mage_Payment_Model_Config
 
     /**
      * Return Gateway Config
-     * 
+     *
      */
     public function getGatewayConfig()
     {
@@ -124,10 +124,9 @@ class Afone_Comnpay_Model_Config extends Mage_Payment_Model_Config
     }
 
 
-
     /**
      * Return Gateway URL (depends Gateway URL Config : PRODUCTION or HOMOLOGATION)
-     * 
+     *
      */
     public function getGatewayURL($config=null)
     {
@@ -144,7 +143,34 @@ class Afone_Comnpay_Model_Config extends Mage_Payment_Model_Config
         {
             return $this->getProductionGatewayURL();
         }
-    }    
+    }
+
+    /**
+     * Return Port
+     *
+     */
+    public function getPort()
+    {
+        return $this->getConfigData('port');
+    }
+
+    /**
+     * Return API Path debit
+     *
+     */
+    public function getPathD()
+    {
+        return $this->getConfigData('path_d');
+    }
+
+    /**
+     * Return API Path PNF
+     *
+     */
+    public function getPathP3f()
+    {
+        return $this->getConfigData('path_p3f');
+    }
 
 }
 ?>

@@ -1,0 +1,36 @@
+<div class="entry-edit">
+    <div class="entry-edit-head">
+        <h4><?php echo $this->__('Liste des transactions ComNpay'); ?></h4>
+    </div>
+    <div class="fieldset fieldset-wide">
+        <?php $transactions = $this->getTransactions();?>
+        <div class="grid">
+            <div class="hor-scroll">
+                <table cellspacing="0" class="data">
+                    <thead>
+                    <tr class="headings">
+                        <th>ID Transaction</th>
+                        <th>Date</th>
+                        <th>Montant</th>
+                        <th>&Eacute;tat du paiement</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach($transactions as $t) { ?>
+                        <tr>
+                            <td><?php echo $t["transacId"];?></td>
+                            <td><?php
+                                if( $t["transacDate"] != null)
+                                    echo date_create($t["transacDate"])->format('d-m-Y');
+                                ?>
+                            </td>
+                            <td><?php echo ($t["transacMontant"]/100)." &euro;";?></td>
+                            <td><?php echo $t["transacOK"];?></td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

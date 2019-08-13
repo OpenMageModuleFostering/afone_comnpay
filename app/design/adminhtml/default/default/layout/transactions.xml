@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <adminhtml_sales_order_view>
+        <reference name="sales_order_tabs">
+            <action method="addTab">
+                <name>order_view_tab_infostransactions</name>
+                <block>comnpay/adminhtml_order_view_tab_infostransactions</block>
+            </action>
+        </reference>
+    </adminhtml_sales_order_view>
+    <adminhtml_system_config_edit>
+        <reference name="head">
+            <action method="addJs"><script>comnpay/validation.js</script></action>
+        </reference>
+    </adminhtml_system_config_edit>
+</layout>
