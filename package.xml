@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Afone_Comnpay</name>
+    <version>1.0.2</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/gpl-license.php">GPL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>The extension provides Comnpay payment integration. </summary>
+    <description>The extension provides Comnpay payment integration. </description>
+    <notes>Package de la version 1.0.2</notes>
+    <authors><author><name>Afone</name><user>SMA</user><email>smalinge@afone.com</email></author><author><name>Afone</name><user>comnpay-technique</user><email>technique@comnpay.com</email></author></authors>
+    <date>2014-03-17</date>
+    <time>13:40:25</time>
+    <contents><target name="magelocal"><dir name="Afone"><dir name="Comnpay"><dir name="Block"><file name="Form.php" hash="ca26215d0ab55dc3f7aacd0251d50cff"/><file name="Info.php" hash="f5a8eb9455cb4aead41fc2b514476a4e"/></dir><dir name="Helper"><file name="Data.php" hash="466794a09ce357efd1fa8c3557632618"/></dir><dir name="Model"><file name="Config.php" hash="09d2de1330b91d44595978f4568f31f7"/><dir name="Source"><file name="GatewayConfig.php" hash="8a78c821784419c9d73db715da107c73"/></dir><file name="Standard.php" hash="d6dfda5d15b5e653ac6271ec3792220a"/></dir><dir name="controllers"><file name="PaymentController.php" hash="dadb6381a028c6d02e72d22877959673"/></dir><dir name="etc"><file name="config.xml" hash="5d9e3fe6631129147f18da370051ec77"/><file name="system.xml" hash="0b10066abf7a2e71884c3515da8ff1ce"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="comnpay"><file name="form.phtml" hash="dbf84bfa2f81aa259137b6df00e00cea"/><file name="info.phtml" hash="1eb9b644b1ed16aceab214474c1dfba9"/><file name="redirect.phtml" hash="027352527d68f8bd0c62baee7de58ec5"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Afone_Comnpay.xml" hash="df1877990fbda48789d0a047bdfa05ed"/></dir></target><target name="magelocale"><dir name="fr_FR"><file name="Afone_Comnpay.csv" hash="4951a072f71981baf0b2e9d5bfeb9ff4"/></dir></target><target name="mageskin"><dir name="frontend"><dir name="default"><dir name="comnpay"><file name="logo-comnpay.png" hash="d53116075ead203c5544b9bb901979b1"/></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.3.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

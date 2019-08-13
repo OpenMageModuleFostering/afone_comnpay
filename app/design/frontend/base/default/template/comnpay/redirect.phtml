@@ -1,0 +1,19 @@
+<?php
+// Get data
+$comnpay = Mage::registry( 'comnpay' );
+
+if ($comnpay['url-config']=="HOMOLOGATION")
+{
+	echo "<center><b><span style='color:red'>PAIEMENT DE TEST</span></b></center>";
+}
+?>
+
+<p><?php echo $this->__('Please wait, you will be redirected to the payment form.');?> <a href="javascript:document.comnpay.submit();"><?php echo $this->__('Or click here.');?></a></p>
+
+<form name="comnpay" method="post" action="<?php echo $comnpay['form-action']; ?>">
+    <?php echo $comnpay['form']; ?> 
+</form>
+
+<script type="text/javascript">
+    document.comnpay.submit();
+</script>
